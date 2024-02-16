@@ -6,9 +6,9 @@ import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-export default function Shapes() {
+export default function Shapes3() {
   return (
-    <div className="absolute left-0 top-0 hidden md:block  row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0">
+    <div className="absolute bottom-10 -right-60  hidden xl:block  row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0">
       <Canvas
         className="z-0"
         shadows
@@ -35,14 +35,9 @@ export default function Shapes() {
 function Geometries() {
   const geometries = [
     {
-      position: [-1, 0, 1],
-      r: 0.3,
-      geometry: new THREE.IcosahedronGeometry(3), // Gem
-    },
-    {
-      position: [1.5, 0.5, -1],
+      position: [1, 0, 4],
       r: 0.4,
-      geometry: new THREE.TorusGeometry(2, 0.5, 16, 32), // Gem
+      geometry: new THREE.CapsuleGeometry(0.5, 3, 8, 16),
     },
   ];
 

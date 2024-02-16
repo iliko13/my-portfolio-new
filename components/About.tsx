@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/hooks";
+import Shapes3 from "@/components/Shapes3";
 
 function About() {
   const { ref } = useSectionInView("About", 0.5);
@@ -10,7 +11,7 @@ function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="relative mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
@@ -18,9 +19,8 @@ function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Law</span>, I decided to pursue my passion
-        for programming. I enrolled in a coding bootcamp and learned{" "}
+        After graduating I decided to pursue my passion for programming. I
+        enrolled in a coding bootcamp and learned{" "}
         <span className="font-medium">frontend web development</span>.{" "}
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
@@ -41,6 +41,7 @@ function About() {
         am currently learning about{" "}
         <span className="font-medium">history and philosophy</span>.
       </p>
+      <Shapes3 />
     </motion.section>
   );
 }
