@@ -1,13 +1,27 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { link } from "fs/promises";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = {
+  link: string;
+  title: string;
+  description: string;
+  tags: readonly string[];
+  imageUrl: StaticImageData;
+};
 
-const ProjectComp = ({ title, description, tags, imageUrl }: ProjectProps) => {
+const ProjectComp = ({
+  link,
+  title,
+  description,
+  tags,
+  imageUrl,
+}: ProjectProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -48,15 +62,17 @@ const ProjectComp = ({ title, description, tags, imageUrl }: ProjectProps) => {
           </ul>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt={title}
-          quality={95}
-          className=" absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition
+        <Link href={link} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={imageUrl}
+            alt={title}
+            quality={95}
+            className=" absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl transition
       group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04]
       group-even:group-hover:translate-x-3 group-even:group-hover:-translate-y-3 group-even:group-hover:rotate-2
       group-even:right-[initial] group-even:-left-40 "
-        />
+          />
+        </Link>
       </section>
     </motion.div>
   );

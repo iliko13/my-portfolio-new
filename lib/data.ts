@@ -41,6 +41,7 @@ export const projectsData = [
       "Typescript",
     ],
     imageUrl: nikeShoes,
+    link: "https://nike-shoes-app.vercel.app/",
   },
   {
     title: "Orkol-Studio",
@@ -48,19 +49,22 @@ export const projectsData = [
       "I worked as a frontend developer on this startup project for 2 weeks. Users can give public feedback to companies.",
     tags: ["React", "Framer-motion", "Tailwind", "Typescript"],
     imageUrl: orkolImg,
+    link: "https://orkol-studio.netlify.app",
   },
   {
-    title: "rmtDev",
+    title: "Movie-app",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Framer-motion", "Tailwind"],
     imageUrl: barbieImg,
+    link: "https://movie-x-app.netlify.app",
   },
   {
-    title: "Word Analytics",
+    title: "My-portfolio",
     description: "This is my first portfolio. ",
     tags: ["React", "Framer-motions", "Typescript", "Tailwind", "React-hooks"],
     imageUrl: portfolioImg,
+    link: "https://iliko-portfolio.netlify.app",
   },
 ] as const;
 
