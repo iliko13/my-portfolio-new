@@ -1,8 +1,7 @@
-import React from "react";
 import barbieImg from "@/public/barbie.png";
-import orkolImg from "@/public/orkol-studio.png";
 import portfolioImg from "@/public/portfolio-screenshot.png";
 import nikeShoes from "@/public/NikeShoes.png";
+import carRent from "@/public/carRent.png";
 
 export const links = [
   {
@@ -44,12 +43,12 @@ export const projectsData = [
     link: "https://nike-shoes-app.vercel.app/",
   },
   {
-    title: "Orkol-Studio",
+    title: "Car-Rent",
     description:
       "I worked as a frontend developer on this startup project for 2 weeks. Users can give public feedback to companies.",
-    tags: ["React", "Framer-motion", "Tailwind", "Typescript"],
-    imageUrl: orkolImg,
-    link: "https://orkol-studio.netlify.app",
+    tags: ["React", "Next", "Tailwind", "Typescript"],
+    imageUrl: carRent,
+    link: "https://car-appliaction.vercel.app/",
   },
   {
     title: "Movie-app",
