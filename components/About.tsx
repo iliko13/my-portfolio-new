@@ -29,8 +29,9 @@ function About() {
         <span className="font-medium">
           React, Next.js, Typescript, and TailwindCSS
         </span>
-        . I am also familiar with Node.js, MongoDB and PostgreSQL. I am always
-        looking to learn new technologies. I am currently looking for a{" "}
+        . I am also familiar with Jest, testing-library, Node.js, MongoDB and
+        PostgreSQL. I am always looking to learn new technologies. I am
+        currently looking for a{" "}
         <span className="font-medium">full-time position</span> as a software
         developer.
       </p>
